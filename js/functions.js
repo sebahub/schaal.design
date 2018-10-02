@@ -8,6 +8,8 @@ let navMobile = document.querySelector ('.nav-mobile');
 
 let buns = document.querySelectorAll ('.bun');
 
+let wrapper = document.querySelector ('main')
+
 //- Burger-Menu
 
 close.addEventListener('click', (event) => {
@@ -21,6 +23,17 @@ burger.addEventListener('click', (event) => {
   
   buns.forEach((element) => {
     element.classList.toggle('animation');
+
+    });
+
+});
+
+wrapper.addEventListener('click', (event) => {
+    navMobile.classList.remove('visible');
+  //buns.classList.toggle('animation');
+  
+  buns.forEach((element) => {
+    element.classList.remove('animation');
 
     });
 
@@ -100,6 +113,7 @@ function init() {
 
 
 let printAnimation = document.querySelector('.print');
+let aliveAnimation = document.querySelector('.alive');
 
 
 window.addEventListener('scroll', () => {
@@ -112,7 +126,9 @@ window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
 
     if (scrolled >= 150) {
-        //printAnimation.classList.add('print-animation');
+        printAnimation.classList.add('animation');
+        //aliveAnimation.classList.remove('hidden');
+        aliveAnimation.classList.add('animation');
 
     }
 
