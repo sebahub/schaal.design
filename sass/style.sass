@@ -1,0 +1,217 @@
+@import reset
+@import mixins
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,200,700,800')
+
+// VARIABLES
+
+$ratio: 24 / 18
+$baseline: 24px
+
+// Colors
+
+$col-prim: #DF6666
+$col-sec: #fafafa
+
+// Font-sizes
+
+$golden-ratio: 1.4
+$font-size-root: 1.125em
+
+$font-size-p: $font-size-root
+$font-size-h4: $font-size-p
+$font-size-h3: $font-size-p * $golden-ratio
+$font-size-h2: $font-size-h3 * $golden-ratio
+$font-size-h1: $font-size-h2 * $golden-ratio
+
+=uppercase
+    text-transform: uppercase
+
+// Base
+
+body
+    font-family: "Roboto", sans-serif
+
+p
+    font-size: $font-size-p
+    line-height: 1.5
+h1
+    font-size: $font-size-h1
+h2
+    font-size: $font-size-h2
+h3
+    font-size: $font-size-h3
+h4
+    font-size: $font-size-h4
+
+
+//- Navigation
+
+
+.hidden
+    display: none
+
+.visible
+    display: block
+
+.topbar
+    width: 100%
+
+nav
+    width: 100%
+    //display: flex
+    .nav-mobile
+        position: absolute
+        background: white
+        width: 96%
+        right: 2%
+        //top: 8px
+        //z-index: 99 
+        +material-shadow(1)
+        //display: none
+        transform: scale(0)
+        transform-origin: right top
+        //transition: all ease 0.2s
+        +ease-quint
+        &.visible
+            display: block
+            transform: scale(1)
+            transform-origin: right top
+            
+        li
+            +uppercase
+            width: max-content
+            margin: auto
+            line-height: 2
+
+.nav-logo
+    margin-top: 16px
+    margin-left: 2%
+    img
+        height: 42px
+
+/*.nav-mobile-close
+    position: absolute
+    right: 4%
+    top: 10px
+    background: grey
+    width: 30px
+    height: 30px
+    border-radius: 50%
+    text-align: center
+    &::before
+        position: absolute
+        content: ""
+        width: 2px
+        height: 18px
+        background: black
+        //right: 2%
+        top: 5px
+        transform: rotate(45deg)
+    &::after
+        position: absolute
+        content: ""
+        width: 2px
+        height: 18px
+        background: black
+        //right: 2%
+        top: 5px
+        transform: rotate(-45deg)*/
+
+.nav-mobile-burger
+    position: absolute
+    right: 2%
+    top: 26px
+    .bun
+        width: 24px
+        height: 4px
+        margin-bottom: 2px
+        background: black
+        //transition: all ease 0.2s
+        +ease-quint
+    .top.animation
+        transform: translateY(6px) rotate(45deg)
+    .middle.animation
+        opacity: 0
+    .bottom.animation
+        transform: translateY(-6px) rotate(-45deg)
+
+header
+    //height: 560px
+    background: url("https://picsum.photos/520/520/?random"), #ffffff
+    background-repeat: no-repeat
+    background-size: cover
+    background-blend-mode: screen
+    width: 100%
+
+.header-wrapper
+    width: 96%
+    margin: auto
+.header-claim
+    padding-top: $baseline*2
+    padding-bottom: $baseline
+    h1
+        margin-bottom: $baseline/2
+        font-size: 42px
+    h2
+        font-size: 36px
+button
+    width: 126px
+    height: 30px
+    border: 2px solid $col-prim
+    background: none
+    box-sizing: border-box
+    +uppercase
+.btn-1
+    margin-right: 8px
+    color: $col-prim
+.btn-2
+    color: $col-sec
+
+
+
+.btn-2
+    background: $col-prim
+
+//- Typewriter Text
+
+.txt-type > .txt
+    //border-right: 1px solid #777
+
+
+@keyframes fadeIn
+    from
+        border-color: white
+    to
+        border-color: grey
+
+
+
+
+.txt-type > .txt
+    border-right: 1px solid grey
+    animation: fadeIn 1s infinite alternate
+    //border-bottom: 4px solid $col-prim
+    color: $col-prim
+
+//- Typewirter Text Ende
+
+main
+    width: 96%
+    margin: auto
+    max-width: 1440px
+
+section
+    margin-top: $baseline*2
+
+.print
+    &.print-animation
+        display: none
+        &::after
+            display: block
+            content: ' Alive'
+            text-decoration: none
+
+article
+    p
+        margin-bottom: $baseline*2
