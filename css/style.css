@@ -103,11 +103,20 @@ nav {
     .nav-mobile-li li a {
       color: black; }
 
+.nav-mobile-scroll-li {
+  overflow: auto;
+  white-space: nowrap; }
+  .nav-mobile-scroll-li li {
+    display: inline-block;
+    padding: 14px;
+    text-transform: uppercase; }
+
 .nav-logo {
   padding-top: 16px;
   padding-left: 2%; }
   .nav-logo img {
-    height: 42px; }
+    height: 42px;
+    fill: red; }
 
 /*.nav-mobile-close
     position: absolute
