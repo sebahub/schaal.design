@@ -8,7 +8,11 @@ let navMobile = document.querySelector ('.nav-mobile');
 
 let buns = document.querySelectorAll ('.bun');
 
-let wrapper = document.querySelector ('main')
+let wrapper = document.querySelector ('main');
+
+let portfolioImage = document.querySelectorAll ('.portfolio-img');
+
+let portfolioInfo = document.querySelectorAll ('.portfolio-info');
 
 //- Burger-Menu
 
@@ -38,6 +42,20 @@ wrapper.addEventListener('click', (event) => {
     });
 
 });
+
+
+
+portfolioInfo.forEach((element) => {
+
+element.addEventListener('click', (event) => {
+        
+            
+            element.classList.toggle('portfolio-info-animation');
+
+        });
+
+    });
+    
 
 //- Typewriter
 

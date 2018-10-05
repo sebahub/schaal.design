@@ -50,7 +50,8 @@ button
     &:active
         position: relative
         top: 1px
-
+*
+    //outline: 1px solid red
 
 //- Navigation
 
@@ -150,30 +151,45 @@ nav
     right: 2%
     top: 36px
     cursor: pointer
+    width: 24px
+    user-select: none
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    -webkit-tap-highlight-color: transparent
     .bun
-        width: 24px
+        width: 100%
         height: 4px
         margin-bottom: 2px
         background: black
-        //transition: all ease 0.2s
-        +ease-quint
+        transition: transform ease 0.2s
+        //+ease-quint
+        border-radius: 2px
+        &.middle
+            transform: scale(1)
+        //&.bottom
+            width: 90%
     .top.animation
         transform: translateY(6px) rotate(45deg)
     .middle.animation
-        opacity: 0
+        transform: scale(0)
     .bottom.animation
         transform: translateY(-6px) rotate(-45deg)
+        width: 100%
 
 header
     //height: 560px
     background: url("https://picsum.photos/520/520/?random"), #ffffff
     background-repeat: no-repeat
     background-size: cover
-    background-blend-mode: screen
+    background-blend-mode: soft-light
     width: 100%
 
 .header-wrapper
     width: 96%
+    max-width: 1440px
     margin: auto
 .header-claim
     padding-top: $baseline*2
@@ -181,12 +197,13 @@ header
     h1
         //margin-bottom: $baseline/2
         font-size: 36px
+        padding-bottom: $baseline
     h2
-        margin-top: $baseline
+        margin-top: $baseline*2
         font-size: 36px
 .header-claim-line
     width: 63px
-    height: 10px
+    height: 8px
     background: $col-prim
 button
     width: 126px
@@ -260,3 +277,134 @@ section
 article
     p
         margin-bottom: $baseline*2
+
+#section-2
+
+.portfolio
+    //width: 96%
+    margin: auto
+    display: flex
+    flex: auto
+    flex-flow: wrap
+    justify-content: space-between
+.portfolio-img
+    max-width: 420px
+    max-height: 420px
+    margin: auto
+    margin-bottom: $baseline
+    +material-shadow(1)
+    //&::after
+        width: 40px
+        height: 40px
+        content: ""
+        position: relative
+        top: 100%
+        transform: translate(-40px, -40px)
+        left: 100%
+        //width: 20px
+        display: block
+        font-size: 24px
+        background: white
+        text-align: center
+        border-radius: 100% 0 0 0
+        //transition: all ease 2s
+        +ease-quint
+    //&.portfolio-img-animation
+        //background: white
+        //&::after
+            position: relative
+            content: ""
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            border-radius: 0
+            transform: translate(0, 0)
+            opacity: 50%
+            //display: inline
+
+    &.one
+        background: url("../bilder/foto-schaal-flyer.jpg")
+        width: 100%
+        height: 100vw
+        background-size: cover
+        background-position: center
+    &.two
+        background: url("../bilder/foto-schaal-flyer.jpg")
+        width: 100%
+        height: 100vw
+        background-size: cover
+        background-position: center
+    &.three
+        background: url("../bilder/foto-schaal-flyer.jpg")
+        width: 100%
+        height: 100vw
+        background-size: cover
+        background-position: center
+    &.four
+        background: url("../bilder/foto-schaal-flyer.jpg")
+        width: 100%
+        height: 100vw
+        background-size: cover
+        background-position: center
+    &.five
+        background: url("../bilder/foto-schaal-flyer.jpg")
+        width: 100%
+        height: 100vw
+        background-size: cover
+        background-position: center
+    &.six
+        background: url("../bilder/foto-schaal-flyer.jpg")
+        width: 100%
+        height: 100vw
+        background-size: cover
+        background-position: center
+
+.portfolio-info
+    position: relative
+    width: 100%
+    height: 100%
+    transform: scale(0.15)
+    transform-origin: right bottom
+    border-top-left-radius: 100%
+    overflow: hidden
+    //float: left
+    //display: inline-block
+    background: white
+    padding-left: $baseline*2
+    padding-right: $baseline
+    cursor: pointer
+    +ease-quint
+    h4, a, p
+        opacity: 0
+
+    &.portfolio-info-animation
+        transform: scale(1)
+        border-radius: 0
+        h4, a, p
+            opacity: 100
+
+        h4
+            margin-top: $baseline*2
+            margin-bottom: $baseline
+        a
+            text-decoration: underline
+
+@supports (display: grid)
+    @media screen and (min-width: 480px)
+        header
+            height: 420px
+            display: grid
+            grid-template-columns: 2% 1fr 2fr 2%
+        .header-wrapper
+            grid-column-start: 2
+            margin-top: 0
+        .header-img
+            background: url("https://previews.123rf.com/images/mopc95/mopc951612/mopc95161200021/69350647-vector-illustration-with-blue-icon-in-flat-line-style-design-concept-for-digital-marketing-social-ca.jpg")
+            background-size: cover
+            grid-column-start: 3
+            background-position: center
+
+        section
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr
