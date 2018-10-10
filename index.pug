@@ -57,12 +57,13 @@ html(lang="en")
         header
             .header-wrapper
                 .header-claim
-                    h1 schaal.design
-                    .header-claim-line
+                    //-h1 schaal.design
+                    //-.header-claim-line
                     h2 Wir designen <br><span class="txt-type" data-wait="3000" data-words='["Visitenkarten", "Flyer", "Logos", "Webseiten", "ziemlich alles"]'></span>
-
-                button.btn-1 Portfolio
-                button.btn-2 Kontakt
+                a(href="#section-3")
+                    button.btn-1 Portfolio
+                a(href="#section-4")
+                    button.btn-2 Kontakt
             .header-img
 
         //- Header Ende
@@ -70,67 +71,116 @@ html(lang="en")
         //- Content
 
         main
+            
 
             section#section-1
-                article.article-1
-                    h3 Print is <span class="print">Dead</span><span class="alive">Alive</span>
-                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel doloremque nulla at voluptatum recusandae praesentium, laudantium illo. Enim eius deserunt, sunt maxime omnis fuga atque error sit tempore repudiandae saepe.
+                h2 Leistungen
+                .section-wrapper
+                    article.article-1
+                        h3 Print is <span class="print">Dead</span><span class="alive">Alive</span>
+                        p.border-left Obwohl die Digitalisierung immer mehr Gebiete abdeckt, gehören klassische Medien wie Visitenkarten und Briefpapiere zum Inventar eines jeden Unternehmens. Für echte Hingucker sorgen Flyer, Poster und Plakate. 
+                        p.claim Sorgen Sie für ein professionelles Auftreten beim Kunden mit schaal.design
 
-                article.article-2
-                    h3 Na Logo
-                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel doloremque nulla at voluptatum recusandae praesentium, laudantium illo. Enim eius deserunt, sunt maxime omnis fuga atque error sit tempore repudiandae saepe.
+                    article.article-2
+                        h3 Na Logo
+                        p.border-left Das Logo ist das Gesicht des Unternehmens und gibt Ihnen ein individuelles Erscheinungsbild. 
+                        p.claim Wir sorgen dafür, dass es auf jedem Medium strahlt.
 
-
-                article.article-3
-                    h3 Print is Dead
-                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel doloremque nulla at voluptatum recusandae praesentium, laudantium illo. Enim eius deserunt, sunt maxime omnis fuga atque error sit tempore repudiandae saepe.
-
-
-                article.article-4
-                    h3 Print is Dead
-                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel doloremque nulla at voluptatum recusandae praesentium, laudantium illo. Enim eius deserunt, sunt maxime omnis fuga atque error sit tempore repudiandae saepe.
+                    article.article-3
+                        h3 Print is Dead
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel doloremque nulla at voluptatum recusandae praesentium, laudantium illo. Enim eius deserunt, sunt maxime omnis fuga atque error sit tempore repudiandae saepe.
 
 
-                article.article-5
-                    h3 Print is Dead
-                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel doloremque nulla at voluptatum recusandae praesentium, laudantium illo. Enim eius deserunt, sunt maxime omnis fuga atque error sit tempore repudiandae saepe.
+                    article.article-4
+                        h3 Print is Dead
+                        p.border-left Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel doloremque nulla at voluptatum recusandae praesentium, laudantium illo. Enim eius deserunt, sunt maxime omnis fuga atque error sit tempore repudiandae saepe.
+
+
+                    article.article-5
+                        h3 Print is Dead
+                        p.border-left Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel doloremque nulla at voluptatum recusandae praesentium, laudantium illo. Enim eius deserunt, sunt maxime omnis fuga atque error sit tempore repudiandae saepe.
 
             section#section-2
+                h2 Portfolio
                 article.portfolio
-                    .portfolio-img.one
+                    .portfolio-image-wrapper
+                        img(src="bilder/foto-schaal-flyer.jpg", alt="")
                         article.portfolio-info
                             h4 Flyer, Wickelfalz, DIN Lang
                             a(href="http://www.foto-schaal.de", target="_blank", rel="noopener noreferrer") www.foto-schaal.de
                             //-p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet deleniti delectus iusto adipisci quia. Dicta exercitationem, est molestias beatae corporis excepturi fuga esse quo optio maiores dolore! Laudantium, similique nihil.
-                    .portfolio-img.two
+                        .portfolio-icon
+                            .portfolio-icon-bun.top
+                            .portfolio-icon-bun.middle
+                            .portfolio-icon-bun.bottom
+
+                    
+                    .portfolio-image-wrapper
+                        img(src="bilder/foto-schaal-flyer.jpg", alt="")
                         article.portfolio-info
                             h4 Flyer, Wickelfalz, DIN Lang
                             a(href="http://www.foto-schaal.de", target="_blank", rel="noopener noreferrer") www.foto-schaal.de
                             //-p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet deleniti delectus iusto adipisci quia. Dicta exercitationem, est molestias beatae corporis excepturi fuga esse quo optio maiores dolore! Laudantium, similique nihil.
-                    .portfolio-img.three
+                        .portfolio-icon
+                            .portfolio-icon-bun.top
+                            .portfolio-icon-bun.middle
+                            .portfolio-icon-bun.bottom
+
+                    
+                    .portfolio-image-wrapper
+                        img(src="bilder/foto-schaal-flyer.jpg", alt="")
                         article.portfolio-info
                             h4 Flyer, Wickelfalz, DIN Lang
                             a(href="http://www.foto-schaal.de", target="_blank", rel="noopener noreferrer") www.foto-schaal.de
                             //-p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet deleniti delectus iusto adipisci quia. Dicta exercitationem, est molestias beatae corporis excepturi fuga esse quo optio maiores dolore! Laudantium, similique nihil.
-                    .portfolio-img.four
+                        .portfolio-icon
+                            .portfolio-icon-bun.top
+                            .portfolio-icon-bun.middle
+                            .portfolio-icon-bun.bottom
+
+                    
+                    .portfolio-image-wrapper
+                        img(src="bilder/foto-schaal-flyer.jpg", alt="")
                         article.portfolio-info
                             h4 Flyer, Wickelfalz, DIN Lang
                             a(href="http://www.foto-schaal.de", target="_blank", rel="noopener noreferrer") www.foto-schaal.de
                             //-p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet deleniti delectus iusto adipisci quia. Dicta exercitationem, est molestias beatae corporis excepturi fuga esse quo optio maiores dolore! Laudantium, similique nihil.
-                    .portfolio-img.five
+                        .portfolio-icon
+                            .portfolio-icon-bun.top
+                            .portfolio-icon-bun.middle
+                            .portfolio-icon-bun.bottom
+
+                    
+                    .portfolio-image-wrapper
+                        img(src="bilder/foto-schaal-flyer.jpg", alt="")
                         article.portfolio-info
                             h4 Flyer, Wickelfalz, DIN Lang
                             a(href="http://www.foto-schaal.de", target="_blank", rel="noopener noreferrer") www.foto-schaal.de
                             //-p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet deleniti delectus iusto adipisci quia. Dicta exercitationem, est molestias beatae corporis excepturi fuga esse quo optio maiores dolore! Laudantium, similique nihil.
-                    .portfolio-img.six
+                        .portfolio-icon
+                            .portfolio-icon-bun.top
+                            .portfolio-icon-bun.middle
+                            .portfolio-icon-bun.bottom
+
+                    
+                    .portfolio-image-wrapper
+                        img(src="bilder/foto-schaal-flyer.jpg", alt="")
                         article.portfolio-info
                             h4 Flyer, Wickelfalz, DIN Lang
                             a(href="http://www.foto-schaal.de", target="_blank", rel="noopener noreferrer") www.foto-schaal.de
                             //-p Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet deleniti delectus iusto adipisci quia. Dicta exercitationem, est molestias beatae corporis excepturi fuga esse quo optio maiores dolore! Laudantium, similique nihil.
+                        .portfolio-icon
+                            .portfolio-icon-bun.top
+                            .portfolio-icon-bun.middle
+                            .portfolio-icon-bun.bottom
+
+                    
+                    
                     
                 
 
             section#section-3
+                h2 Kontakt
                 
 
             section#section-4

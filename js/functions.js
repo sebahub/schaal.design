@@ -44,17 +44,6 @@ wrapper.addEventListener('click', (event) => {
 });
 
 
-
-portfolioInfo.forEach((element) => {
-
-element.addEventListener('click', (event) => {
-        
-            
-            element.classList.toggle('portfolio-info-animation');
-
-        });
-
-    });
     
 
 //- Typewriter
@@ -155,4 +144,18 @@ window.addEventListener('scroll', () => {
     console.log(scrolled);
     
 
+});
+
+
+let imgButton = document.querySelectorAll('.portfolio-icon');
+console.log(imgButton);
+
+imgButton.forEach(function(imgButton) {
+
+  imgButton.addEventListener('click', function(e){
+
+    let imgOverlay = e.target.previousElementSibling;
+    imgOverlay.classList.toggle('animation');
+    console.log(imgOverlay);
+  })
 });
