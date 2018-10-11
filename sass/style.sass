@@ -303,22 +303,27 @@ section
     flex-flow: wrap
     justify-content: space-between
 .portfolio-image-wrapper
-    width: 100%
+    //width: 100 / 3 * 1%
     //background: red
     position: relative
     display: inline-block
-    object-fit: cover
+    //object-fit: cover
     //background: red
     font-size: 0
     line-height: 0
     +material-shadow(1)
+    margin-bottom: $baseline
     img
         width: 100%
-        object-fit: cover
+        //object-fit: cover
         font-size: 0
         line-height: 0
         margin: 0
         padding: 0
+@media screen and (min-width: 500px)
+    .portfolio-image-wrapper
+        width: 30%
+        
 
 .portfolio-info
     position: absolute
@@ -333,6 +338,7 @@ section
     transition: all ease 2s
     transform-origin: right bottom
     +ease-quint
+    display: none
     &.animation
         background: white
         transform: scale(1)
@@ -346,6 +352,7 @@ section
     height: 100px
     background: white
     border-top-left-radius: 100%
+    display: none
     &::after
         content: "!"
         display: block
