@@ -26,379 +26,384 @@ $font-size-h2: $font-size-h3 * $golden-ratio
 $font-size-h1: $font-size-h2 * $golden-ratio
 
 =uppercase
-    text-transform: uppercase
+  text-transform: uppercase
 
 // Base
 
 body
-    font-family: "Roboto", sans-serif
+  font-family: "Roboto", sans-serif
 
 p
-    font-size: $font-size-p
-    line-height: 1.5
+  font-size: $font-size-p
+  line-height: 1.5
 h1
-    font-size: $font-size-h1
+  font-size: $font-size-h1
 h2
-    font-size: $font-size-h2
+  font-size: $font-size-h2
 h3
-    font-size: $font-size-h3
+  font-size: $font-size-h3
 h4
-    font-size: $font-size-h4
+  font-size: $font-size-h4
 button
-    cursor: pointer
-    border-radius: 2px
-    &:active
-        position: relative
-        top: 1px
+  cursor: pointer
+  border-radius: 2px
+  &:active
+    position: relative
+    top: 1px
 *
-    //outline: 1px solid red
+  //outline: 1px solid red
 
 //- Navigation
 
 
 .hidden
-    display: none
+  display: none
 
 .visible
-    display: block
+  display: block
 
 .topbar
-    width: 100%
-    border-bottom: 1px solid $col-prim
+  width: 100%
+  border-bottom: 1px solid $col-prim
 
 nav
-    width: 100%
+  width: 100%
 .nav-mobile
-    padding-left: 5%
-    position: absolute
-    background: white
-    width: 96%
-    right: 2%
-    top: $baseline*3
-    //z-index: 99 
-    +material-shadow(1)
-    //display: none
-    transform: scale(0)
+  padding-left: 5%
+  position: absolute
+  background: white
+  width: 96%
+  right: 2%
+  top: $baseline*3
+  //z-index: 99 
+  +material-shadow(1)
+  //display: none
+  transform: scale(0)
+  transform-origin: right top
+  //transition: all ease 0.2s
+  +ease-quint
+  height: 220px
+  border-radius: 2px
+  z-index: 99
+  &.visible
+    display: block
+    transform: scale(1)
     transform-origin: right top
-    //transition: all ease 0.2s
-    +ease-quint
-    height: 220px
-    border-radius: 2px
-    z-index: 99
-    &.visible
-        display: block
-        transform: scale(1)
-        transform-origin: right top
 .nav-mobile-li
-    //background: red
+  //background: red
+  width: max-content
+  margin: auto
+  +center(both)
+  li
+    +uppercase
     width: max-content
-    margin: auto
-    +center(both)
-    li
-        +uppercase
-        width: max-content
-        //margin: auto
-        line-height: 2.5
-        border-bottom: 1px solid $col-prim
-        &:last-of-type
-            border-bottom: none
-        a
-            color: black
+    //margin: auto
+    line-height: 2.5
+    border-bottom: 1px solid $col-prim
+    &:last-of-type
+      border-bottom: none
+    a
+      color: black
 .nav-mobile-scroll-li
-    //background: yellow
-    overflow: auto
-    white-space: nowrap
-    li
-        display: inline-block
-        padding: 14px
-        +uppercase
+  //background: yellow
+  overflow: auto
+  white-space: nowrap
+  li
+    display: inline-block
+    padding: 14px
+    +uppercase
 .nav-logo
-    padding-top: 16px
-    padding-left: 2%
-    img
-        height: 42px
-        fill: red
+  padding-top: 16px
+  padding-left: 2%
+  img
+    height: 42px
+    fill: red
 
 /*.nav-mobile-close
+  position: absolute
+  right: 4%
+  top: 10px
+  background: grey
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  text-align: center
+  &::before
     position: absolute
-    right: 4%
-    top: 10px
-    background: grey
-    width: 30px
-    height: 30px
-    border-radius: 50%
-    text-align: center
-    &::before
-        position: absolute
-        content: ""
-        width: 2px
-        height: 18px
-        background: black
-        //right: 2%
-        top: 5px
-        transform: rotate(45deg)
-    &::after
-        position: absolute
-        content: ""
-        width: 2px
-        height: 18px
-        background: black
-        //right: 2%
-        top: 5px
-        transform: rotate(-45deg)*/
+    content: ""
+    width: 2px
+    height: 18px
+    background: black
+    //right: 2%
+    top: 5px
+    transform: rotate(45deg)
+  &::after
+    position: absolute
+    content: ""
+    width: 2px
+    height: 18px
+    background: black
+    //right: 2%
+    top: 5px
+    transform: rotate(-45deg)*/
 
 .nav-mobile-burger
-    position: absolute
-    right: 2%
-    top: 36px
-    cursor: pointer
-    width: 24px
-    user-select: none
-    -webkit-touch-callout: none
-    -webkit-user-select: none
-    -khtml-user-select: none
-    -moz-user-select: none
-    -ms-user-select: none
-    -webkit-tap-highlight-color: transparent
-    .bun
-        width: 100%
-        height: 4px
-        margin-bottom: 2px
-        background: black
-        transition: transform ease 0.2s
-        //+ease-quint
-        border-radius: 2px
-        &.middle
-            transform: scale(1)
-        //&.bottom
-            width: 90%
-    .top.animation
-        transform: translateY(6px) rotate(45deg)
-    .middle.animation
-        transform: scale(0)
-    .bottom.animation
-        transform: translateY(-6px) rotate(-45deg)
-        width: 100%
-
-header
-    //height: 560px
-    background: url("https://picsum.photos/520/520/?random"), #ffffff
-    background-repeat: no-repeat
-    background-size: cover
-    background-blend-mode: soft-light
+  position: absolute
+  right: 2%
+  top: 36px
+  cursor: pointer
+  width: 24px
+  user-select: none
+  -webkit-touch-callout: none
+  -webkit-user-select: none
+  -khtml-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  -webkit-tap-highlight-color: transparent
+  .bun
+    width: 100%
+    height: 4px
+    margin-bottom: 2px
+    background: black
+    transition: transform ease 0.2s
+    //+ease-quint
+    border-radius: 2px
+    &.middle
+      transform: scale(1)
+    //&.bottom
+      width: 90%
+  .top.animation
+    transform: translateY(6px) rotate(45deg)
+  .middle.animation
+    transform: scale(0)
+  .bottom.animation
+    transform: translateY(-6px) rotate(-45deg)
     width: 100%
 
+header
+  //height: 560px
+  background: url("https://picsum.photos/520/520/?random"), #ffffff
+  background-repeat: no-repeat
+  background-size: cover
+  background-blend-mode: soft-light
+  width: 100%
+
 .header-wrapper
-    width: 96%
-    max-width: 1440px
-    margin: auto
+  width: 96%
+  max-width: 1440px
+  margin: auto
 .header-claim
-    padding-top: $baseline*2
+  padding-top: $baseline*2
+  padding-bottom: $baseline
+  h1
+    //margin-bottom: $baseline/2
+    font-size: 36px
     padding-bottom: $baseline
-    h1
-        //margin-bottom: $baseline/2
-        font-size: 36px
-        padding-bottom: $baseline
-    h2
-        margin-top: $baseline/2
-        font-size: 36px
+  h2
+    margin-top: $baseline/2
+    font-size: 36px
 .header-claim-line
-    width: 63px
-    height: 8px
-    background: $col-prim
+  width: 63px
+  height: 8px
+  background: $col-prim
 button
-    width: 126px
-    height: 30px
-    border: 2px solid $col-prim
-    background: none
-    box-sizing: border-box
-    +uppercase
+  width: 126px
+  height: 30px
+  border: 2px solid $col-prim
+  background: none
+  box-sizing: border-box
+  +uppercase
 .btn-1
-    margin-right: 8px
-    color: $col-prim
+  margin-right: 8px
+  color: $col-prim
 .btn-2
-    color: $col-sec
+  color: $col-sec
 
 
 
 .btn-2
-    background: $col-prim
+  background: $col-prim
 
 //- Typewriter Text
 
 .txt-type > .txt
-    //border-right: 1px solid #777
+  //border-right: 1px solid #777
 
 
 @keyframes fadeIn
-    from
-        border-color: white
-    to
-        border-color: grey
+  from
+    border-color: white
+  to
+    border-color: grey
 
 
 
 
 .txt-type > .txt
-    border-right: 1px solid grey
-    animation: fadeIn 1s infinite alternate
-    //border-bottom: 4px solid $col-prim
-    color: $col-prim
+  border-right: 1px solid grey
+  animation: fadeIn 1s infinite alternate
+  //border-bottom: 4px solid $col-prim
+  color: $col-prim
 
 //- Typewirter Text Ende
 
 main
-    width: 96%
-    margin: auto
-    max-width: 1440px
-    h2
-        font-size: 18px
-        +uppercase
-        color: $col-prim
-        font-weight: 200
-        border-bottom: 1px solid $col-prim
-        margin-bottom: $baseline
-    h3
-        margin-bottom: $baseline/2
-    p
-        &.border-left
-            border-left: 1px solid grey
-            padding-left: 2%
-            margin-bottom: $baseline
+  width: 96%
+  margin: auto
+  max-width: 1440px
+  h2
+    font-size: 18px
+    +uppercase
+    color: $col-prim
+    font-weight: 200
+    border-bottom: 1px solid $col-prim
+    margin-bottom: $baseline
+  h3
+    margin-bottom: $baseline/2
+    text-align: center
+    margin-bottom: $baseline*2
+  .claim
+    margin-top: $baseline
 
-    .claim
-        border-left: 0
-        font-weight: 600
-    article
-        margin-bottom: $baseline*2
+.card
+  border-bottom: 12px solid $col-prim
+  +material-shadow(1)
+  padding: $baseline
+  margin-bottom: $baseline
+
+  .claim
+    border-left: 0
+    font-weight: 600
+  article
+    margin-bottom: $baseline*2
 section
-    margin-top: $baseline*2
+  margin-top: $baseline*2
 
 .print
-    opacity: 100
-    position: relative
-    transition: all ease 0.4s
-    top: 0
-    &.animation
-        top: 25px
-        opacity: 0
-.alive
+  opacity: 100
+  position: relative
+  transition: all ease 0.4s
+  top: 0
+  &.animation
+    top: 25px
     opacity: 0
-    position: relative 
-    transition: all ease 0.4s
-    top: -25px
-    left: -56px
-    &.animation
-        opacity: 100
-        top: 0px
+.alive
+  opacity: 0
+  position: relative 
+  transition: all ease 0.4s
+  top: -25px
+  left: -56px
+  &.animation
+    opacity: 100
+    top: 0px
 
 
 #section-2
 
 .portfolio
-    //width: 96%
-    margin: auto
-    display: flex
-    flex: auto
-    flex-flow: wrap
-    justify-content: space-between
+  //width: 96%
+  margin: auto
+  display: flex
+  flex: auto
+  flex-flow: wrap
+  justify-content: space-between
 .portfolio-image-wrapper
-    //width: 100 / 3 * 1%
-    //background: red
-    position: relative
-    display: inline-block
+  //width: 100 / 3 * 1%
+  //background: red
+  position: relative
+  display: inline-block
+  //object-fit: cover
+  //background: red
+  font-size: 0
+  line-height: 0
+  +material-shadow(1)
+  margin-bottom: $baseline
+  img
+    width: 100%
     //object-fit: cover
-    //background: red
     font-size: 0
     line-height: 0
-    +material-shadow(1)
-    margin-bottom: $baseline
-    img
-        width: 100%
-        //object-fit: cover
-        font-size: 0
-        line-height: 0
-        margin: 0
-        padding: 0
+    margin: 0
+    padding: 0
 @media screen and (min-width: 500px)
-    .portfolio-image-wrapper
-        width: 30%
-        
+  .portfolio-image-wrapper
+    width: 30%
+    
 
 .portfolio-info
-    position: absolute
-    width: 100%
-    height: 100%
-    color: white
-    top: 0
-    left: 0
-    line-height: 1.5
-    font-size: 38px
-    transform: scale(0.2)
-    transition: all ease 2s
+  position: absolute
+  width: 100%
+  height: 100%
+  color: white
+  top: 0
+  left: 0
+  line-height: 1.5
+  font-size: 38px
+  transform: scale(0.2)
+  transition: all ease 2s
+  transform-origin: right bottom
+  +ease-quint
+  display: none
+  &.animation
+    background: white
+    transform: scale(1)
     transform-origin: right bottom
-    +ease-quint
-    display: none
-    &.animation
-        background: white
-        transform: scale(1)
-        transform-origin: right bottom
 
 .portfolio-icon
+  position: absolute
+  bottom: 0
+  right: 0
+  width: 100px
+  height: 100px
+  background: white
+  border-top-left-radius: 100%
+  display: none
+  &::after
+    content: "!"
+    display: block
     position: absolute
-    bottom: 0
-    right: 0
-    width: 100px
-    height: 100px
-    background: white
-    border-top-left-radius: 100%
-    display: none
-    &::after
-        content: "!"
-        display: block
-        position: absolute
-        font-size: 48px
-        text-align: center
-        margin: auto
-        bottom: 30px
-        right: 30px
-    //.portfolio-icon-bun
-        //position: absolute
-        //margin: auto
-        top: 100px
-        height: 2px
-        background: $col-prim
-        margin-bottom: 4px
-        cursor: pointer
-        &.top
-            width: 50%
-        &.middle
-            width: 30%
-        &.bottom
-            width: 40%
+    font-size: 48px
+    text-align: center
+    margin: auto
+    bottom: 30px
+    right: 30px
+  //.portfolio-icon-bun
+    //position: absolute
+    //margin: auto
+    top: 100px
+    height: 2px
+    background: $col-prim
+    margin-bottom: 4px
+    cursor: pointer
+    &.top
+      width: 50%
+    &.middle
+      width: 30%
+    &.bottom
+      width: 40%
 
 
 @supports (display: grid)
-    @media screen and (min-width: 800px)
-        header
-            height: 420px
-            display: grid
-            grid-template-columns: minmax(300px, 300px) 1fr
-            max-width: 1440px
-            margin: auto
-            padding-left: 2%
-            padding-right: 2%
-        .header-wrapper
-            //grid-column-start: 2
-            margin-top: 0
-        .header-img
-            background: url("https://previews.123rf.com/images/mopc95/mopc951612/mopc95161200021/69350647-vector-illustration-with-blue-icon-in-flat-line-style-design-concept-for-digital-marketing-social-ca.jpg")
-            background-size: contain      
-            //grid-column-start: 3
-            background-position: center
-            background-repeat: no-repeat
+  @media screen and (min-width: 800px)
+    header
+      height: 420px
+      display: grid
+      grid-template-columns: minmax(300px, 300px) 1fr
+      max-width: 1440px
+      margin: auto
+      padding-left: 2%
+      padding-right: 2%
+    .header-wrapper
+      //grid-column-start: 2
+      margin-top: 0
+    .header-img
+      background: url("https://previews.123rf.com/images/mopc95/mopc951612/mopc95161200021/69350647-vector-illustration-with-blue-icon-in-flat-line-style-design-concept-for-digital-marketing-social-ca.jpg")
+      background-size: contain      
+      //grid-column-start: 3
+      background-position: center
+      background-repeat: no-repeat
 
-        .section-wrapper
-            display: grid
-            grid-template-columns: 1fr 1fr
-            grid-column-gap: $baseline
+    .section-wrapper
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-column-gap: $baseline

@@ -120,20 +120,20 @@ nav {
     fill: red; }
 
 /*.nav-mobile-close
+  position: absolute
+  right: 4%
+  top: 10px
+  background: grey
+  width: 30px
+  height: 30px
+  border-radius: 50%
+  text-align: center
+  &::before
     position: absolute
-    right: 4%
-    top: 10px
-    background: grey
-    width: 30px
-    height: 30px
-    border-radius: 50%
-    text-align: center
-    &::before
-        position: absolute
-        content: ""
-        width: 2px
-        height: 18px
-        background: black */
+    content: ""
+    width: 2px
+    height: 18px
+    background: black */
 .nav-mobile-burger {
   position: absolute;
   right: 2%;
@@ -252,15 +252,22 @@ main {
     border-bottom: 1px solid #DF6666;
     margin-bottom: 24px; }
   main h3 {
-    margin-bottom: 12px; }
-  main p.border-left {
-    border-left: 1px solid grey;
-    padding-left: 2%;
-    margin-bottom: 24px; }
+    margin-bottom: 12px;
+    text-align: center;
+    margin-bottom: 48px; }
   main .claim {
+    margin-top: 24px; }
+
+.card {
+  border-bottom: 12px solid #DF6666;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14), 0 1px 2px rgba(0, 0, 0, 0.24);
+  padding: 24px;
+  margin-bottom: 24px; }
+  .card .claim {
     border-left: 0;
     font-weight: 600; }
-  main article {
+  .card article {
     margin-bottom: 48px; }
 
 section {
